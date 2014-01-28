@@ -1,23 +1,21 @@
 {
-    "name": "vendor/package",
-    "description": "",
+    "name": "travis/ex",
+    "description": "A PHP function to safely extract information from a multi-dimensional object or array.",
+    "homepage": "https://github.com/swt83/php-ex",
+    "license": "MIT",
     "authors": [
         {
             "name": "Scott Travis",
-            "email": "scott@swt83.com"
+            "email": "scott.w.travis@gmail.com"
         }
     ],
     "require": {
-        "php": ">=5.3.0",
-        "illuminate/support": "4.0.*"
+        "php": ">=5.3.0"
     },
     "autoload": {
-        "classmap": [
-            "src/migrations"
-        ],
-        "psr-0": {
-            "Vendor\\Package\\": "src/"
-        }
+        "files": [
+            "src/ex.php"
+        ]
     },
     "minimum-stability": "dev"
 }
