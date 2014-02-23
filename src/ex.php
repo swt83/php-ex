@@ -6,7 +6,7 @@ function ex($object, $coords, $default = null)
     {
         return $default;
     }
-    
+
     $keys = explode('.', $coords);
     foreach ($keys as $key)
     {
@@ -18,18 +18,19 @@ function ex($object, $coords, $default = null)
             }
             else
             {
-                return $default;    
+                return $default;
             }
         }
         elseif (is_object($object))
         {
-            if (property_exists($object, $key))
+            $test = $object->$key;
+            if ($test)
             {
-                $object = $object->$key;
+                $object = $test;
             }
             else
             {
-                return $default;    
+                return $default;
             }
         }
         else
