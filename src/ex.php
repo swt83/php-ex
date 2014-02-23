@@ -23,10 +23,9 @@ function ex($object, $coords, $default = null)
         }
         elseif (is_object($object))
         {
-            $test = $object->$key;
-            if ($test)
+            if (isset($object->$key))
             {
-                $object = $test;
+                $object = $object->$key;
             }
             else
             {
