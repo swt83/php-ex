@@ -42,3 +42,13 @@ if (!function_exists('ex'))
         return $object ? $object : $default;
     }
 }
+
+if (!function_exists('excount'))
+{
+    function excount($array)
+    {
+        $num = @count($array); // suppress error
+
+        return $num ? $num : 0;
+    }
+}
